@@ -6,6 +6,7 @@ name: called_workflows
 #
 
 on:
+  workflow_dispatch:
   workflow_call:
 
 jobs:
