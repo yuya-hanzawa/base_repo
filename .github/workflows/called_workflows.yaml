@@ -24,3 +24,8 @@ jobs:
         with:
           repository: 'yuya-hanzawa/base_repo/sample'
           path: 'sample'
+
+      - name: Output File Content
+        working-directory: 'sample' # 作業ディレクトリを 'sample' に変更
+        run: |
+          cat .read_files
