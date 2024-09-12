@@ -1,0 +1,37 @@
+name: called_workflows
+
+#
+# Documentation:
+# https://github.com/github/super-linter
+#
+
+on:
+  workflow_call:
+
+jobs:
+  lint:
+    runs-on: [self-hosted, X64, ubuntu-latest, general]
+    timeout-minutes: 10
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          repository: 'yuya-hanzawa/base_repo/sample'
+          path: 'sample'
+
+      - name: Lint Code Base
+        # uses: github/super-linter@v5
+        uses: github/super-linter/slim@v5
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACTIONS_RUNNER_DEBUG: true
+          VALIDATE_SQLFLUFF: true
+          SQLFLUFF_CONFIG_FILE: ".sqlfluff"
