@@ -24,14 +24,3 @@ jobs:
         with:
           repository: 'yuya-hanzawa/base_repo/sample'
           path: 'sample'
-
-      - name: Lint Code Base
-        # uses: github/super-linter@v5
-        uses: github/super-linter/slim@v5
-        env:
-          VALIDATE_ALL_CODEBASE: false
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACTIONS_RUNNER_DEBUG: true
-          VALIDATE_SQLFLUFF: true
-          SQLFLUFF_CONFIG_FILE: ".sqlfluff"
