@@ -23,7 +23,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          repository: 'yuya-hanzawa/base_repo/sample'
+          repository: 'yuya-hanzawa/base_repo'
           path: 'sample'
 
       - name: Output File Content
