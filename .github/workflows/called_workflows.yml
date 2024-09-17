@@ -29,4 +29,4 @@ jobs:
       - name: Output File Content
         working-directory: 'sample' # 作業ディレクトリを 'sample' に変更
         run: |
-          pwd && ls
+          cat read_files
