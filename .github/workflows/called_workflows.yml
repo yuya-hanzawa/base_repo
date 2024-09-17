@@ -29,4 +29,4 @@ jobs:
       - name: Output File Content
         working-directory: 'sample'
         run: |
-          pwd
+          pwd && ls && cat read_files
