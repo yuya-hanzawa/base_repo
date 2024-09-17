@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'yuya-hanzawa/base_repo'
-          path: 'sample'
+          path: 'base_repo/sample'
 
       - name: Output File Content
         working-directory: 'sample' # 作業ディレクトリを 'sample' に変更
