@@ -24,9 +24,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: 'yuya-hanzawa/base_repo'
-          path: 'base_repo/sample'
 
       - name: Output File Content
         working-directory: 'sample'
         run: |
-          pwd && ls && cat read_files
+          pwd && ls && cat base_repo/sample/read_files
