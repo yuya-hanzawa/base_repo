@@ -24,4 +24,4 @@ jobs:
       - name: Output File Content
         working-directory: 'sample'
         run: |
-          pwd && ls && cat base_repo/sample/read_files
+          pwd && ls && cat read_files
