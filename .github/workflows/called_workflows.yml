@@ -28,4 +28,4 @@ jobs:
 
       - name: Output File Content
         run: |
-          cat read_files
+          pwd
