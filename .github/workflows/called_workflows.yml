@@ -27,5 +27,6 @@ jobs:
           path: 'base_repo/sample'
 
       - name: Output File Content
+        working-directory: 'sample'
         run: |
           pwd
