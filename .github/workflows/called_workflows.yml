@@ -27,6 +27,5 @@ jobs:
           path: 'base_repo/sample'
 
       - name: Output File Content
-        working-directory: 'sample' # 作業ディレクトリを 'sample' に変更
         run: |
           cat read_files
